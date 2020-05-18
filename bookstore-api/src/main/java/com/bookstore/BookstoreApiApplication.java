@@ -7,11 +7,11 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan("com.controller")
-@EntityScan("com.entidades")
-@EnableJpaRepositories
+@ComponentScan(basePackages = "com.controller")
+@EntityScan(basePackages = "com.entity")
+@EnableJpaRepositories(basePackages = "com.repositorio")
 public class BookstoreApiApplication {
-
+	
 	public static void main(String[] args) {
 		SpringApplication.run(BookstoreApiApplication.class, args);
 	}
